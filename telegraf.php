@@ -15,6 +15,7 @@ function remove ($index, &$textStorage){
         echo 'индекс не найден';
         return false;
     }
+
 }
 
 function edit (int$index, string$title, string$text, &$textStorage){
