@@ -2,33 +2,31 @@
 
 $textStorage = [];
 
-function add ($title, $text, &$textStorage) {
-    array_push ($textStorage, ['title' => $title, 'text' => $text]);
+function add (string $title, string $text, array &$textStorage): void
+{
+    $textStorage[] = ['title' => $title, 'text' => $text];
 }
 
 
-function remove ($index, &$textStorage){
+function remove (int $index, array &$textStorage): bool
+{
     if (isset ($textStorage[$index])){
         unset ($textStorage[$index]);
         return true;
-    } else {
-        echo 'индекс не найден';
+    }
         return false;
     }
 
-}
 
-function edit (int$index, string$title, string$text, &$textStorage){
+function edit (int $index, string $title, string $text, array &$textStorage): bool
+{
     if (isset ($textStorage[$index])){
         $textStorage[$index]['title'] = $title;
         $textStorage[$index]['text'] = $text;
         return true;
     }
-    else {
-        echo 'индекс не найден';
         return false;
     }
-}
 
 
 add ('лето', 'Отличное время', $textStorage);
