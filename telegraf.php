@@ -35,15 +35,22 @@ add ('зима', 'Холодное время', $textStorage);
 print_r($textStorage);
 
 remove (0, $textStorage);
+
 var_dump($textStorage);
+
 
 remove (5, $textStorage);
+
 var_dump($textStorage);
+
 
 edit (1,'весна', $textStorage[1]['text'], $textStorage);
+
 var_dump($textStorage);
 
+
 edit (7,'осень', $textStorage[1]['text'], $textStorage);
+
 var_dump($textStorage);
 
 
